@@ -1,0 +1,40 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">nom</label>
+      <input type="text" />
+    </form>
+    <button type="submit" id="btn">cliquez</button>
+    <button id="btnre">blanc</button>
+    <script>
+      document.getElementById("btn");
+      document.getElementById("btnre");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      btn.onclick = function () {
+        var rndCol =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+        document.body.style.backgroundColor = rndCol;
+      };
+      btnre.onclick = function () {
+        document.body.style.backgroundColor = "white";
+        // btnre.classList.add("size");
+        btnre.classList.toggle("size");
+      };
+    </script>
+  </body>
+</html>
